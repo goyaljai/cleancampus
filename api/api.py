@@ -17,6 +17,9 @@ def signup(request):
     result = functions.signup(first_name, last_name, email, password, confirm_password, phone_number)
     return Response(result)
 
+def index(request):
+    return HttpResponse(request,'/index.html')
+
 
 class ComplaintView(APIView):
  
@@ -26,6 +29,7 @@ class ComplaintView(APIView):
         return Response(result)
 
     def post(self,request):
+        image = request.FILES["image"]
         email = request.data.get('email', False)
         title = request.data.get('title', False)
         description = request.data.get('description', False)
@@ -37,7 +41,7 @@ class ComplaintView(APIView):
                   [email], fail_silently=False)
 
         #a = Complaint()
-        image = request.FILES["image"]
+        
         #a.save()
         result = functions.complaint(email, title, description,latitude,longitude,status,image)
         return Response(result)
