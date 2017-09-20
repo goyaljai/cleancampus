@@ -4,15 +4,10 @@ from rest_framework.parsers import MultiPartParser, FormParser,FileUploadParser
 from rest_framework.response import Response
 from rest_framework.decorators import api_view,permission_classes
 <<<<<<< HEAD
-<<<<<<< HEAD
 from django.core.mail import send_mail
 import functions
 from django.http import HttpResponse
 import analysis
-=======
-
-import functions
->>>>>>> a177d5999f5a83979b939e1d664ee4cfe5d63c56
 =======
 
 import functions
@@ -31,10 +26,7 @@ def signup(request):
 
 def index(request):
 <<<<<<< HEAD
-<<<<<<< HEAD
     #analysis.compute()
-=======
->>>>>>> a177d5999f5a83979b939e1d664ee4cfe5d63c56
 =======
 >>>>>>> a177d5999f5a83979b939e1d664ee4cfe5d63c56
     return HttpResponse(request,'/index.html')
@@ -56,17 +48,11 @@ class ComplaintView(APIView):
         longitude = request.data.get('longitude', False)
         status = request.data.get('status', False)
 <<<<<<< HEAD
-<<<<<<< HEAD
         file = open("kmeansData","a")
         file.write(str(latitude) + " " + str(longitude) + "\n")
         file.close()
         # send_mail('Registered', 'Registered', 'cleancampus.swe@gmail.com',
         #          [email], fail_silently=False)
-=======
-
-        send_mail('Registered', 'Registered', 'cleancampus.swe@gmail.com',
-                  [email], fail_silently=False)
->>>>>>> a177d5999f5a83979b939e1d664ee4cfe5d63c56
 =======
 
         send_mail('Registered', 'Registered', 'cleancampus.swe@gmail.com',
@@ -86,11 +72,7 @@ def get_profile(request):
     result = functions.get_profile(email)
     return Response(result)
 <<<<<<< HEAD
-<<<<<<< HEAD
  
-=======
- 
->>>>>>> a177d5999f5a83979b939e1d664ee4cfe5d63c56
 =======
  
 >>>>>>> a177d5999f5a83979b939e1d664ee4cfe5d63c56

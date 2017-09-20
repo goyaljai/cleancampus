@@ -1,7 +1,10 @@
 from django.conf.urls import patterns, include, url
 <<<<<<< HEAD
+<<<<<<< HEAD
 from django.conf import settings
 from django.conf.urls.static import static
+=======
+>>>>>>> a177d5999f5a83979b939e1d664ee4cfe5d63c56
 =======
 >>>>>>> a177d5999f5a83979b939e1d664ee4cfe5d63c56
 from django.contrib import admin
@@ -12,7 +15,11 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
 <<<<<<< HEAD
+<<<<<<< HEAD
     url(r'^analysis/',api.index,name = 'anylasis'),
+=======
+	url(r'^analysis/',api.index,name = 'anylasis'),
+>>>>>>> a177d5999f5a83979b939e1d664ee4cfe5d63c56
 =======
 	url(r'^analysis/',api.index,name = 'anylasis'),
 >>>>>>> a177d5999f5a83979b939e1d664ee4cfe5d63c56
@@ -27,7 +34,11 @@ urlpatterns = patterns('',
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_URL)
 <<<<<<< HEAD
+<<<<<<< HEAD
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+=======
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+>>>>>>> a177d5999f5a83979b939e1d664ee4cfe5d63c56
 =======
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 >>>>>>> a177d5999f5a83979b939e1d664ee4cfe5d63c56
